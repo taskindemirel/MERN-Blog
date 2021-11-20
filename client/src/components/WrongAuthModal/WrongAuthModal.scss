@@ -1,0 +1,58 @@
+@use '../../variables/colors.scss';
+@use '../../variables/fonts.scss';
+
+
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$grey;
+
+    .modalContainer {
+        background-color: colors.$white;
+        padding: 40px 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -150px;
+        box-shadow: -3px 3px 18px rgba(0,0,0,0.25);
+        border-radius: 4px;
+
+        .fa-times-circle {
+            color: #DC3545;
+            font-size: 44px;
+            margin-bottom: 12px;
+        }
+
+        .messageTitle {
+            font-family: fonts.$heading;
+            color: colors.$black;
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .message {
+            font-family: fonts.$body;
+            color: colors.$lightBlack;
+            margin-bottom: 20px;
+        }
+
+        .close {
+            background-color: colors.$blue;
+            font-family: fonts.$body;
+            color: colors.$white;
+            padding: 10px;
+            width: 120px;
+            border-radius: 2px;
+            box-shadow: -1px 1px 10px rgba(0,0,0,0.25);
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+    }
+}
