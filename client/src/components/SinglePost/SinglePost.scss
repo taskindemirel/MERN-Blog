@@ -1,0 +1,145 @@
+@use '../../variables/fonts.scss';
+@use '../../variables/colors.scss';
+
+.singlePost {
+    flex: 3;
+    padding: 50px 200px 50px 10px;
+
+
+    .singlePostWrapper {
+
+
+        .singlePostTitle, 
+        .singlePostCats,
+        .singlePostAuthor,
+        .singlePostDate,
+        .singlePostTitleInput {
+            font-family: fonts.$heading;
+            margin-bottom: 10px;
+        }
+
+        .singlePostTitleInput:focus {
+            outline: none;
+        }
+
+        .singlePostTitle, .singlePostTitleInput {
+            color: colors.$black;
+            font-size: 44px;
+            font-weight: 500;
+            margin-bottom: 20px;
+
+        }
+
+        .singlePostCats {
+            color: colors.$blue;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+
+            .postCatItem {
+                background-color: colors.$lightGrey;
+                padding: 2px 6px;
+                margin-right: 3px;
+                text-transform: uppercase;
+                border-radius: 1px;
+                color: colors.$blue;
+                font-weight: 600;
+                border: 1px solid colors.$grey;
+            }
+        }
+
+        .singlePostAuthor {
+            color: colors.$darkGrey;
+            font-size: 14.5px;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .postDate {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-family: fonts.$body;
+            color: lighten(colors.$darkGrey, 15%);
+            font-size: 13.5px;
+
+            .fa-clock {
+                margin-right: 5px;
+            }
+        }
+
+
+
+        .singlePostUpdateDelete {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 15px;
+
+            .fas {
+                font-size: 19px;
+                cursor: pointer;
+            }
+
+            .fa-edit {
+                color: #28A745;
+            }
+
+            .fa-trash-alt {
+                color: #DC3545;
+                margin-left: 5px;
+            }
+        }
+
+        .singlePostImage {
+            width: 600px;
+            height: auto;
+            border-radius: 4px;
+            margin: 25px 0;
+            object-fit: cover;
+        }
+
+        .singlePostText {
+            font-family: fonts.$body;
+            font-size: 18px;
+            line-height: 1.6;
+            color: colors.$black;
+        }
+    }
+    .singlePostUpdateButton {
+        width: 130px;
+        padding: 12px 8px;
+        background-color: colors.$blue;
+        font-family: fonts.$body;
+        font-size: 16px;
+        color: colors.$white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 50px;
+    }
+
+    .socialShareButtons {
+        width: 100%;
+        margin-top: 75px;
+        padding-top: 75px;
+        border-top: 1px solid colors.$grey;
+
+        .shareTitle {
+            font-family: fonts.$zillaSlab;
+            font-size: 21px;
+            font-weight: 600;
+            font-style: italic
+            ;
+            letter-spacing: 0.5px;
+            color: colors.$lightBlack;
+            margin-bottom: 20px;
+        }
+
+        .socialShareButton {
+            margin-right: 8px;
+        }
+    }
+}
