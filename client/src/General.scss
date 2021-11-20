@@ -1,0 +1,18 @@
+@use './variables/colors.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+}
+
+html {
+    overflow-x: hidden;
+}
