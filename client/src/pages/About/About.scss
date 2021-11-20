@@ -1,0 +1,80 @@
+@use '../../variables/colors.scss';
+@use '../../variables/fonts.scss';
+
+.about {
+    display: flex;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+
+    .aboutWrapper {
+        flex: 3;
+        margin-top: 50px;
+        padding-right: 150px;
+        padding-left: 20px;
+
+        .mainTitle {
+            font-family: fonts.$heading;
+            font-size: 36px;
+            font-weight: 600;
+            color: lighten(colors.$black, 10%);
+            letter-spacing: 1px;
+            margin-top: 50px;
+            margin-bottom: 100px;
+
+        }
+
+        .aboutPart {
+            margin-bottom: 100px;
+
+            .title {
+                font-family: fonts.$heading;
+                font-size: 28px;
+                margin-bottom: 20px;
+                color: colors.$lightBlack;
+                font-weight: 500;
+            }
+
+            .aboutText {
+                font-family: fonts.$body;
+                font-size: 18px;
+                line-height: 1.8;
+                color: colors.$lightBlack;
+            }
+
+            .wilde {
+                padding-left: 25px;
+                margin-top: 20px;
+                font-family: fonts.$lora;
+                font-style: italic;
+                font-size: 20px;
+                line-height: 1.6;
+                letter-spacing: 0.2px;
+            }
+        }
+
+        .aboutTD {
+            padding-bottom: 100px;
+            border-bottom: 1px solid colors.$grey;
+        }
+
+        .aboutBlog > .title {
+            font-family: fonts.$heading;
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .about {
+        flex-direction: column;
+
+        .aboutWrapper {
+            width: 100%;
+            margin-top: 50px;
+            padding: 0 20px;
+        }
+    }
+}
