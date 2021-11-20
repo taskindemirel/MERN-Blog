@@ -1,0 +1,126 @@
+@use '../../variables/fonts.scss';
+@use '../../variables/colors.scss';
+
+.createContent {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+
+    .wrapperForm {
+        width: 100%;
+        max-width: 1300px;
+        display: flex;
+        flex-direction: column;
+
+        .uploadImage {
+            max-width: 600px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .editor {
+            background-color: colors.$lightGrey;
+            border: 1px solid colors.$grey;
+            width: 100%;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+
+            .editorPageTitle {
+                font-family: fonts.$heading;
+                font-size: 28px;
+                font-weight: 500;
+                color: colors.$black;
+                margin-bottom: 50px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                .title,
+                .chooseImageLabel {
+                    padding: 12px 8px;
+                    font-family: fonts.$body;
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                    border-radius: 4px;
+                    border: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .chooseImageLabel {
+                    background-color: colors.$grey;
+                    font-family: fonts.$body;
+                    width: 140px;
+                    text-align: center;
+                    color: colors.$black;
+                    cursor: pointer;
+                    font-size: 14px;
+
+                    .fa-plus {
+                        margin-right: 8px;
+                    }
+                }
+
+                .chooseImageInput {
+                    display: none;
+                }
+
+                .categoryLabel {
+                    font-family: fonts.$body;
+                    color: colors.$darkGrey;
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                }
+
+                .selectBox {
+                    background-color: colors.$white;
+                    margin-bottom: 20px;
+                    font-family: fonts.$body;
+                    font-size: 15px;
+                    color: colors.$darkGrey;
+                    width: 20%;
+                    min-width: 200px;
+                    
+
+                    .multiselect {
+                        font-family: fonts.$body;
+                        font-size: 15px;
+                        color: colors.$darkGrey;
+                        height: 40px;
+                    }
+                }
+
+                .quillWrapper {
+                    margin-bottom: 10px;
+
+                    .ql-editor {
+                        background-color: #ffffff;
+                        min-height: 300px;
+                    }
+
+                }
+            }
+        }
+
+        .publishButton {
+            padding: 12px;
+            width: 140px;
+            background-color: colors.$blue;
+            color: colors.$white;
+            border: none;
+            border-radius: 4px;
+            font-family: fonts.$body;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+    }
+}

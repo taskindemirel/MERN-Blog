@@ -1,0 +1,12 @@
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .single {
+        display: flex;
+        width: 100%;
+        max-width: 1300px;
+    }
+}

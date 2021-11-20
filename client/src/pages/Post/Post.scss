@@ -1,0 +1,167 @@
+@use '../../variables/fonts.scss';
+@use '../../variables/colors.scss';
+
+.post {
+    display: flex;
+    margin-bottom: 50px;
+
+    .postImage {
+        width: 310px;
+        height: 330px;
+        object-fit: cover;
+        margin-right: 20px;
+        border-radius: 2px;
+    }
+
+    .postText {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom: 1px solid colors.$grey;
+        width: 100%;
+
+
+        .postInfo {
+            .postCat {
+                font-family: fonts.$heading;
+                font-size: 10px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-top: 3px;
+                margin-bottom: 10px;              
+
+                .postCatItem {
+                    background-color: colors.$lightGrey;
+                    padding: 2px 6px;
+                    margin-right: 3px;
+                    border-radius: 1px;
+                    color: colors.$blue;
+                    font-weight: 600;
+                    border: 1px solid colors.$grey;
+                }
+            }
+
+            .postTitle {
+                font-family: fonts.$heading;
+                color: colors.$black;
+                font-size: 32px;
+                text-transform: uppercase;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+
+
+
+            .postAuthor {
+                font-family: fonts.$heading;
+                color: colors.$darkGrey;
+                font-size: 13px;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+                font-weight: 500;
+            }
+
+            .fa-clock {
+                margin-right: 5px;
+            }
+
+            .postDate {
+                font-family: fonts.$body;
+                color: lighten(colors.$darkGrey, 15%);
+                font-size: 13.5px;
+            }
+
+            .postIntro {
+                font-family: fonts.$body;
+                color: colors.$black;
+                font-size: 18px;
+                margin-top: 21px;
+                /*
+                text-overflow: ellipsis;
+                display: -webkit-box;  
+                -webkit-box-orient: vertical;              
+                -webkit-line-clamp: 4;
+                overflow: hidden;
+                */
+                line-height: 1.4;
+                
+
+            }
+        }
+
+        .postReadMore {
+            padding-bottom: 30px;
+            font-family: fonts.$heading;
+            color: colors.$blue;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            letter-spacing: 1px;
+
+
+            .readMore {
+                cursor: pointer;
+            }
+
+            .arrow {
+                font-size: 22px;
+                margin-left: 6px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .post {
+        flex-direction: column;
+        margin: 0 auto;
+
+        .postImage {
+            width: 100%;
+            min-height: 250px;
+            height: auto;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 2px;
+        }
+
+        .postText {
+            .postInfo {
+                .postCat {
+                    margin-top: 10px;
+                    margin-bottom: 10px;              
+                }
+    
+                .postTitle {
+                    font-size: 28px;
+                }
+    
+                .postIntro {
+                    font-size: 17px;
+                    margin-top: 10px;
+                }
+            }
+    
+            .postReadMore {
+                padding-bottom: 30px;
+                padding-top: 30px;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+       
+                .readMore {
+                    cursor: pointer;
+                }
+    
+                .arrow {
+                    font-size: 19px;
+                    margin-left: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

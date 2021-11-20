@@ -1,0 +1,54 @@
+@use '../../variables/fonts.scss';
+@use '../../variables/colors.scss';
+
+.login {
+    width: 100%;
+    height: calc(100vh - 300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .loginTitle {
+        font-family: fonts.$heading;
+        font-size: 32px;
+        margin-bottom: 50px;
+        font-weight: 500;
+        color: colors.$lightBlack;
+    }
+
+    .loginForm {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        border: 1px solid colors.$grey;
+        border-radius: 4px;
+
+        .loginUsername, .loginPassword, .loginButton {
+            height: 34px;
+            padding: 3px 6px;
+            margin-bottom: 7px;
+            border-radius: 4px;
+            font-family: fonts.$body;
+        }
+
+        .loginUsername, .loginPassword {
+            border: 1px solid colors.$grey;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .loginButton {
+            margin-bottom: 0;
+            border: none;
+            background-color: colors.$blue;
+            color: colors.$white;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+}

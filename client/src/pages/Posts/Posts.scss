@@ -1,0 +1,15 @@
+@use '../../variables/fonts.scss';
+@use '../../variables/colors.scss';
+
+.posts {
+    flex: 3;
+    padding: 50px 150px 50px 10px;
+}
+
+@media screen and (max-width: 990px) {
+    .posts {
+        width: 100%;
+        max-width: 970px;
+        padding: 50px 20px 0;
+    }
+}
