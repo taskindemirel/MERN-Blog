@@ -1,0 +1,188 @@
+@use '../../variables/colors.scss';
+@use '../../variables/fonts.scss';
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 20px;
+
+    .contactWrapper {
+        display: flex;
+        justify-content: center;
+
+        .contactAll {
+            flex: 3;
+            margin-top: 50px;
+            padding-right: 100px;
+
+
+            .contactTitle {
+                font-family: fonts.$heading;
+                font-size: 36px;
+                color: colors.$lightBlack;
+                margin-bottom: 50px;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+
+            .contactContainer {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 50px;
+            }
+
+            .contactForm {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                border-right: 1px solid colors.$grey;
+
+                .formItem {
+                    margin-bottom: 10px;
+                    width: 80%;
+                    height: 40px;
+                    padding: 5px;
+                    border: none;
+                    border-bottom: 1px solid colors.$grey;
+                    font-family: fonts.$body;
+                    font-size: 16px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .messageArea {
+                    height: 100px;
+                    resize: none;
+                }
+
+                .sendButton {
+                    width: 120px;
+                    height: 40px;
+                    border: none;
+                    font-family: fonts.$body;
+                    background-color: colors.$blue;
+                    color: colors.$white;
+                    border-radius: 3px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                    cursor: pointer;
+                    box-shadow: -1px 1px 8px rgba(0,0,0,0.25);
+                }
+
+                .messageToUser {
+                    font-family: fonts.$body;
+                    font-size: 13.5px;
+                    color: #DC3545;
+                    margin-bottom: 25px;
+                }
+
+                .green {
+                    color: #4BB543;
+                    margin-top: 25px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.7px;
+                }
+            }
+
+            .socialMediaTitle {
+                margin-bottom: 25px;
+                font-size: 22px;
+                color: colors.$lightBlack;
+                font-family: fonts.$heading;
+                font-weight: 500;
+            }
+
+            .socialIcons {
+                .socialIcon {
+                    font-size: 32px;
+                    margin-right: 16px;
+                    color: colors.$lightBlack
+                }
+            }
+        }
+        .sidebar {
+            flex: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contact {
+
+        .header {
+            display: none;
+        }
+
+        .contactWrapper {
+            flex-direction: column;
+            width: 100%;
+            margin-top: 50px;
+            padding: 0 20px;
+
+            .contactAll {
+                padding-bottom: 50px;
+                border-bottom: 1px solid colors.$grey;
+
+
+                .contactContainer {
+                    display: flex;
+
+                    .contactForm {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+        
+        .sidebar {
+            padding-top: 50px;
+            padding-right: 10px;
+            padding-left: 10px;
+            width: 360px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+
+        .contactWrapper {
+            
+
+            .contactAll {
+
+                padding-right: 20px ;
+
+                .contactContainer {
+                    flex-direction: column;
+                    width: 100%;                    
+
+                    .contactForm {
+                        width: 100%;
+                        border-right: none;
+
+                        .formItem {
+                            width: 100%;
+                        }
+                        
+                    }
+
+                    .socialMedia {
+                        margin-top: 50px;
+                        padding-top: 50px;
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+}
